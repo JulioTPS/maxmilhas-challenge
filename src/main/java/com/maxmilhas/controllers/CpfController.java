@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.maxmilhas.models.Cpf;
@@ -31,7 +30,7 @@ public class CpfController {
     }
 
     @GetMapping(path = "{cpf}")
-    public List<Cpf> getCpf(@PathVariable("cpf") long cpfNumber) {
+    public Cpf getCpf(@PathVariable("cpf") String cpfNumber) {
         return cpfService.findByCpfNumber(cpfNumber);
     }
 
@@ -41,7 +40,8 @@ public class CpfController {
     }
 
     @DeleteMapping(path = "{cpf}")
-    public List<Cpf> delete(@PathVariable("cpf") long cpfNumber) {
-        return cpfService.deleteByCpf(cpfNumber);
+    public void delete(@PathVariable("cpf") String cpfNumber) {
+        cpfService.deleteByCpf(cpfNumber);
+        return;
     }
 }

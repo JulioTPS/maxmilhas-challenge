@@ -11,23 +11,23 @@ public class Cpf {
 	private String id;
 
 	@Indexed(unique = true)
-	private long cpf;
+	private String cpf;
 
 	private Instant createdAt;
 
 	public Cpf() {
 	}
 
-	public Cpf(long cpf, Instant createdAt) {
+	public Cpf(String cpf, Instant createdAt) {
 		this.cpf = cpf;
 		this.createdAt = createdAt;
 	}
 
-	public long getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(long cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
