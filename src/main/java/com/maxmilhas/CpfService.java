@@ -15,21 +15,23 @@ public class CpfService {
         this.cpfRepository = cpfRepository;
     }
 
-    List<Cpf> findAll(){
+    List<Cpf> findAll() {
         return cpfRepository.findAll();
     };
 
-    List<Cpf> findByCpfNumber(Integer cpfNumber){
-        return cpfRepository.findByCpfNumber(cpfNumber);
+    List<Cpf> findByCpfNumber(Integer cpfNumber) {
+        System.out.println("finfding by");
+        return cpfRepository.findByCpf(cpfNumber);
     };
 
-    // Cpf saveOrUpdateCpf(Cpf Cpf);
-
-    Cpf save(Cpf cpf){
+    Cpf save(Cpf cpf) {
         cpf.setCreatedAt(Instant.now());
         return cpfRepository.save(cpf);
+    }
+
+    public List<Cpf> deleteByCpf(Integer cpfNumber) {
+        cpfRepository.deleteByCpf(cpfNumber);
+        return cpfRepository.findByCpf(cpfNumber);
     };
-    
-    // void deleteCpfById(String id);
 
 }

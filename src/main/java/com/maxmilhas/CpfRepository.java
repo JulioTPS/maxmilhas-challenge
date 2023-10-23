@@ -11,6 +11,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface CpfRepository extends MongoRepository<Cpf, String> {
 
 	// Pesquisa customizada
-	List<Cpf> findByCpfNumber(@Param("cpfNumber") Integer cpfNumber);
+	List<Cpf> findByCpf(@Param("cpf") Integer cpf);
+
+	void deleteByCpf(@Param("cpf") Integer cpf);
 
 }

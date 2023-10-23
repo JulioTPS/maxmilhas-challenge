@@ -9,22 +9,23 @@ public class Cpf {
 	@Id
 	private String id;
 
-	private Integer cpfNumber;
+	private Integer cpf;
 	private Instant createdAt;
 
-	public Cpf() {}
-
-	public Cpf(Integer cpfNumber, Instant createdAt) {
-        this.cpfNumber = cpfNumber;
-        this.createdAt = createdAt;
-    }
-
-	public Integer getCpfNumber() {
-		return cpfNumber;
+	public Cpf() {
 	}
 
-	public void setCpfNumber(Integer cpfNumber) {
-		this.cpfNumber = cpfNumber;
+	public Cpf(Integer cpf, Instant createdAt) {
+		this.cpf = cpf;
+		this.createdAt = createdAt;
+	}
+
+	public Integer getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(Integer cpf) {
+		this.cpf = cpf;
 	}
 
 	public Instant getCreatedAt() {

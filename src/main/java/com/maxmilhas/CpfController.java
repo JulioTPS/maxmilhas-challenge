@@ -3,6 +3,7 @@ package com.maxmilhas;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,15 +22,20 @@ public class CpfController {
     }
 
     @GetMapping
-    public List<Cpf> getCpf(@RequestParam(value = "cpfNumber", required = false) Integer cpfNumber) {
-        if(cpfNumber == null){
-             return cpfService.findAll();
+    public List<Cpf> getCpf(@RequestParam(value = "cpf", required = false) Integer cpfNumber) {
+        if (cpfNumber == null) {
+            return cpfService.findAll();
         }
         return cpfService.findByCpfNumber(cpfNumber);
     }
-    
+
     @PostMapping
     public Cpf save(@RequestBody Cpf cpf) {
         return cpfService.save(cpf);
+    }
+
+    @DeleteMapping
+    public List<Cpf> delete(@RequestParam(value = "cpf") Integer cpfNumber) {
+        return cpfService.deleteByCpf(cpfNumber);
     }
 }
