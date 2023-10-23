@@ -1,4 +1,4 @@
-package com.maxmilhas;
+package com.maxmilhas.models;
 
 import java.time.Instant;
 
