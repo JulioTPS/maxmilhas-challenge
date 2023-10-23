@@ -6,4 +6,5 @@ O sistema foi divizido em camadas de api (controllers), serviços (services) e a
 Para se inicia o projeto utiliza-se "gradlew bootRun" no console do Windows ou "./gradlew bootRun" em consoles Unix, é recomendado utilizar no do windows devido a formataçãod dos textos de log.
 Para buildar use "gradlew build" ou "./gradlew build"
 
+As request padrão seguem o path: localhost:8080/api/v1/cpf
 
