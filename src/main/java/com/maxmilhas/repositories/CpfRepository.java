@@ -13,8 +13,8 @@ import com.maxmilhas.models.Cpf;
 public interface CpfRepository extends MongoRepository<Cpf, String> {
 
 	// Pesquisa customizada
-	public List<Cpf> findByCpf(@Param("cpf") Integer cpf);
+	public List<Cpf> findByCpf(@Param("cpf") long cpf);
 
-	public void deleteByCpf(@Param("cpf") Integer cpf);
+	public void deleteByCpf(@Param("cpf") long cpf);
 
 }

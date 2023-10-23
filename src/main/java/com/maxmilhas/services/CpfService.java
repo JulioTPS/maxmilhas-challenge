@@ -22,7 +22,7 @@ public class CpfService {
         return cpfRepository.findAll();
     };
 
-    public List<Cpf> findByCpfNumber(Integer cpfNumber) {
+    public List<Cpf> findByCpfNumber(long cpfNumber) {
         System.out.println("finfding by");
         return cpfRepository.findByCpf(cpfNumber);
     };
@@ -32,7 +32,7 @@ public class CpfService {
         return cpfRepository.save(cpf);
     }
 
-    public List<Cpf> deleteByCpf(Integer cpfNumber) {
+    public List<Cpf> deleteByCpf(long cpfNumber) {
         cpfRepository.deleteByCpf(cpfNumber);
         return cpfRepository.findByCpf(cpfNumber);
     };
