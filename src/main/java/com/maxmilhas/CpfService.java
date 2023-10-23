@@ -1,5 +1,6 @@
 package com.maxmilhas;
 
+import java.time.Instant;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,8 @@ public class CpfService {
     // Cpf saveOrUpdateCpf(Cpf Cpf);
 
     Cpf save(Cpf cpf){
-
-        return cpf;
+        cpf.setCreatedAt(Instant.now());
+        return cpfRepository.save(cpf);
     };
     
     // void deleteCpfById(String id);
