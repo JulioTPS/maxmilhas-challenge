@@ -1,2 +1,5 @@
 # maxmilhas
-maxmilhas challenge
+Se inicia o projeto com gradlew bootRun
+Para buildar use gradlew build
+
+
