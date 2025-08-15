@@ -1,3 +1,5 @@
+A project to complete a coding challenge.
+
 # maxmilhas
 Para esse projeto foi utilizado o Spring Boot como framework, pois ele possui uma criação inicial bastante rapida. Foi utilizado java (versão 17) por eu ter mais familiaridade com a linguagem.
 O banco utlizado fora o MonogoDB, porque que eu já tinha ele preparado no meu computador. Além disso eu tive alguns problemas com a instalação do SQL no passsado.
